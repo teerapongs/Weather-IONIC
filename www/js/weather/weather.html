@@ -1,0 +1,62 @@
+<head>
+    <style>
+    table {
+        width: 100%;
+    }
+    
+    table,
+    th,
+    td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    
+    th,
+    td {
+        padding: 5px;
+        text-align: left;
+    }
+    
+    table#t01 tr:nth-child(even) {
+        background-color: #eee;
+    }
+    
+    table#t01 tr:nth-child(odd) {
+        background-color: #fff;
+    }
+    
+    table#t01 th {
+        background-color: pink;
+        color: white;
+    }
+    </style>
+</head>
+
+<body>
+    <ion-view ng-controller="WeatherCtrl as vm">
+        <ion-content>
+            <table id="t01">
+                <tr>
+                    <th>Number</th>
+                    <th>Topic</th>
+                    <th>Information</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>City</td>
+                    <td>{{vm.weather.city}}</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>County</td>
+                    <td>{{vm.weather.country}}</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Woeid</td>
+                    <td>{{vm.weather.woeid}}</td>
+                </tr>
+            </table>
+        </ion-content>
+    </ion-view>
+</body>
